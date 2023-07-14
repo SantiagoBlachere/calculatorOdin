@@ -45,6 +45,7 @@ const equalButton = document.createElement("button");
 equalButton.innerText ="=";
 equalButton.classList.add("equal")
 const display = document.createElement("div");
+display.classList.add("display")
 
 
 calculatorContainer.appendChild(sumButton)
@@ -120,14 +121,14 @@ equalButton.addEventListener("click", () => {
         
         if (operatorChosen === "+") {
             
-            result = sum(firstNumberB, secondNumberB).toFixed2(7);
+            result = sum(firstNumberB, secondNumberB)
             
         } else if (operatorChosen === "-") {
-            result = subtract(firstNumberB, secondNumberB).toFixed(7);
+            result = subtract(firstNumberB, secondNumberB)
         } else if (operatorChosen ==="/") {
-            result = divide(firstNumberB, secondNumberB).toFixed(7);
+            result = divide(firstNumberB, secondNumberB)
         } else if (operatorChosen === "*") {
-            result = multiply(firstNumberB, secondNumberB).toFixed(7);
+            result = multiply(firstNumberB, secondNumberB)
         }
         console.log(result)
         if (result ===  Infinity) {
